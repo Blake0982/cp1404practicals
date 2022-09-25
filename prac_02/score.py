@@ -10,7 +10,7 @@ def get_score():
 
 
 def main():
-    if score >= 100 or score < 0:
+    if score > 100 or score < 0:
         print("Invalid score")
     elif score < 50:
         print("Bad")
