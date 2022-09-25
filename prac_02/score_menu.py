@@ -39,7 +39,7 @@ def menu():
         print("(E)nter Score")
         print("(Q)uite")
         choice = input(">>> ").upper()
-    print("finished ")
+    print("finished")
 
 
 menu_options()
