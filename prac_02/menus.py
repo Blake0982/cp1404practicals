@@ -33,7 +33,7 @@ def menu():
         else:
             print("invalid choice")
         menu_options()
-    print("finished")
+    print("finished ")
 
 
 menu()
