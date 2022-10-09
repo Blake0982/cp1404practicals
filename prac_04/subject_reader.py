@@ -26,7 +26,6 @@ def get_data():
 def print_data(line, subject_data):
     for i in range(0, 3, 1):
         data = subject_data[i]
-        subject = line.split(',')
         subject = data[0]
         lecture = data[1]
         number_of_students = data[2]
