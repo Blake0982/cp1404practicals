@@ -11,7 +11,6 @@ def main():
 
 
 def get_data():
-    global subject_data
     """Read data from file formatted like: subject,lecturer,number of students."""
     input_file = open(FILENAME)
     subject_data = []
@@ -27,7 +26,7 @@ def get_data():
 def print_data(line, subject_data):
     for i in range(0, 3, 1):
         data = subject_data[i]
-        data = line.split(',')
+        subject = line.split(',')
         subject = data[0]
         lecture = data[1]
         number_of_students = data[2]
