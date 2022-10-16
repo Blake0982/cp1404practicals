@@ -13,7 +13,7 @@ print("Hex Colours, type 'Quit' to exit!")
 colour_name = input("Enter a colour name: ").lower()
 while colour_name != "Quit":
     try:
-        print(f"The code for \"{colour_name}\" is {COLOUR_CODES[colour_name]}")
+        print(f"The code for {colour_name} is {COLOUR_CODES[colour_name]}")
     except KeyError:
         print("invalid Colour name")
     colour_name = input("Enter a colour name: ").lower()
