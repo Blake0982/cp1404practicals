@@ -1,8 +1,8 @@
 """
 start time: 10:45am
-finish time:10:40
-total:55 mins - 10 mins for time taken for marking previous prac
-new total = 45 mins :)
+finish time:11:40am
+total:55 min - 10 min for time taken for marking previous prac
+new total = 45 min :)
 """
 from prac_06.programing_language import ProgrammingLanguage
 
