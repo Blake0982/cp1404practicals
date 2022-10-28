@@ -1,7 +1,7 @@
 """
 code used for testing the guitar class
-time taken for class creation: 10mins
-time taken for test program:
+time taken for class creation: 10 mins
+time taken for test program: 10 mins
 """
 from prac_06.guitar import Guitar
 
