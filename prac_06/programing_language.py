@@ -1,5 +1,7 @@
 """
-programing languages class creation
+programing languages class
+stores name, typing method, reflection and year created
+also can check is typing is dynamic
 """
 
 
