@@ -3,6 +3,7 @@ CP1404/CP5632 Practical
 Kivy GUI program to square a number
 Lindsay Ward, IT@JCU
 Started 13/10/2015
+Modified by Blake Knight for CP1404 Prac 7
 """
 
 from kivy.app import App
@@ -16,7 +17,7 @@ class SquareNumberApp(App):
     """ SquareNumberApp is a Kivy App for squaring a number """
     def build(self):
         """ build the Kivy app from the kv file """
-        Window.size = (200, 100)
+        Window.size = (400, 150)
         self.title = "Square Number"
         self.root = Builder.load_file('squaring.kv')
         return self.root
