@@ -4,17 +4,23 @@ time taken:
 est:
 Actual:
 """
-FILENAME = "guitars.csv"
 from prac_06.guitar import Guitar
+
+FILENAME = "guitars.csv"
 
 
 def main():
     infile = open(FILENAME, 'r')
+    guitars = []
     for line in infile:
         parts = line.strip().split(',')
         print(parts)
-        guitars = Guitar(parts[0], int(parts[1]), float(parts[2]))
-        print(guitars)
+        guitar = Guitar(parts[0], int(parts[1]), float(parts[2]))
+        print(guitar)
+        guitars.append(guitar)
+    guitars.sort()
+    print(guitars[0], guitars[1],guitars[2])
+    infile.close()
 
 
 main()
