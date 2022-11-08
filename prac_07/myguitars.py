@@ -16,36 +16,37 @@ def main():
     guitars = []
     read_guitars_from_file(guitars)
     get_users_guitars(guitars)
+    guitars.sort()
     outfile = open(FILENAME, 'w')
     for guitar in guitars:
-        print(f"{guitar[0]},{guitar[1]},{guitar[2]}", file=outfile)
+        print(f"{guitar.name},{guitar.year},{guitar.cost}", file=outfile)
     outfile.close()
+
 
 def read_guitars_from_file(guitars):
     """uses the csv file """
     infile = open(FILENAME, 'r')
-
     for line in infile:
         parts = line.strip().split(',')
-        print(parts)
         guitar = Guitar(parts[0], int(parts[1]), float(parts[2]))
-        print(guitar)
         guitars.append(guitar)
-    guitars.sort()
-    print(guitars[0], guitars[1], guitars[2])
+
     infile.close()
 
 
 def get_users_guitars(guitars):
-    """ this function gets the guitars and the details from the user"""
-    name_of_guitar = str(input("Name:"))
-    while name_of_guitar != "":
+    """
+    this function gets the guitars and the details from the user,
+    this is straight out of prac 6
+    """
+    print("Enter New Guitars")
+    name = str(input("Name:"))
+    while name != "":
         year = int(input("Year:"))
         cost = float(input("Cost: $"))
-        print(f"{name_of_guitar}({year}): ${cost:.2f}")
-        guitars.append(Guitar(name_of_guitar, year, cost))
-        name_of_guitar = str(input("Name:"))
-
+        print(f"{name}({year}): ${cost:.2f}")
+        guitars.append(Guitar(name, year, cost))
+        name = str(input("Name:"))
 
 
 main()

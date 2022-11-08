@@ -27,6 +27,7 @@ class Guitar:
         age = self.get_age()
         if age > 50:
             return True
+        return False
 
     def __lt__(self, other):
         return self.year < other.year
