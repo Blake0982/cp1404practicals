@@ -17,6 +17,10 @@ def main():
     read_guitars_from_file(guitars)
     get_users_guitars(guitars)
     guitars.sort()
+    write_to_file(guitars)
+
+
+def write_to_file(guitars):
     outfile = open(FILENAME, 'w')
     for guitar in guitars:
         print(f"{guitar.name},{guitar.year},{guitar.cost}", file=outfile)
@@ -30,7 +34,6 @@ def read_guitars_from_file(guitars):
         parts = line.strip().split(',')
         guitar = Guitar(parts[0], int(parts[1]), float(parts[2]))
         guitars.append(guitar)
-
     infile.close()
 
 
@@ -40,7 +43,7 @@ def get_users_guitars(guitars):
     this is straight out of prac 6
     """
     print("Enter New Guitars")
-    name = str(input("Name:"))
+    name = input("Name:")
     while name != "":
         year = int(input("Year:"))
         cost = float(input("Cost: $"))
