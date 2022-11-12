@@ -17,6 +17,7 @@ class Guitar:
         """ The string that will occur if the Guitar object is called"""
         return f"{self.name} ({self.year}) : ${self.cost:.2f}"
 
+
     def get_age(self):
         """gets the age of the guitar to be used by the is_vintage function"""
         age = CURRENT_YEAR - self.year
@@ -27,6 +28,7 @@ class Guitar:
         age = self.get_age()
         if age > 50:
             return True
+
         return False
 
     def __lt__(self, other):
