@@ -1,0 +1,15 @@
+BoxLayout:
+    orientation: 'vertical'
+    BoxLayout:
+        orientation: 'vertical'
+        id: entries_box
+        size_hint_y: 2
+    BoxLayout:
+        orientation: 'horizontal'
+        Button:
+            text: "Create Widgets"
+            on_release: app.create_widgets()
+        Button:
+            text: "Clear Widgets"
+            on_release: app.clear_all()
+
