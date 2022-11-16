@@ -6,13 +6,11 @@ actual: 28 min
 
 from kivy.app import App
 from kivy.lang import Builder
-from kivy.properties import StringProperty
 from kivy.uix.label import Label
 
 
 class DynamicLabelsApp(App):
     """Main program - Kivy app to demo dynamic widget creation."""
-    status_text = StringProperty()
 
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
