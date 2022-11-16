@@ -17,19 +17,19 @@ class MileToKmApp(App):
     def handle_calculate(self, value):
         """ handle calculation (could be button press or other call), output result to label widget """
         try:
-            result = float(value) * MILES_KILOMETRES_RATIO
-            self.root.ids.output_label.text = str(f"{result:.3f}")
+            kilometres = float(value) * MILES_KILOMETRES_RATIO
+            self.root.ids.output_label.text = str(f"{kilometres:.3f}")
         except ValueError:
-            result = 0
-            self.root.ids.output_label.text = str(result)
+            kilometres = 0
+            self.root.ids.output_label.text = str(kilometres)
 
     def handle_increment(self, value, increment):
         try:
-            result = float(value) + increment
-            self.root.ids.input_number.text = str(result)
+            miles = float(value) + increment
+            self.root.ids.input_number.text = str(miles)
         except ValueError:
-            result = 0 + increment
-            self.root.ids.input_number.text = str(result)
+            miles = 0 + increment
+            self.root.ids.input_number.text = str(miles)
 
 
 MileToKmApp().run()
