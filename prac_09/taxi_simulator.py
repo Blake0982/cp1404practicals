@@ -1,6 +1,8 @@
 """
 CP1404 Practical 9
 Taxi simulator
+est: 30 mins
+actual: 45 mins
 """
 from taxi import Taxi
 from silver_service_taxi import SilverServiceTaxi
