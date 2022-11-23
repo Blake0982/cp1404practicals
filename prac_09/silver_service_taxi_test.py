@@ -2,7 +2,7 @@ from silver_service_taxi import SilverServiceTaxi
 
 
 def main():
-    my_taxi = SilverServiceTaxi(100, "Prius 1", 3)
+    my_taxi = SilverServiceTaxi("Prius 1", 100, 3)
     print(my_taxi)
     my_taxi.drive(40)
     print(my_taxi)
