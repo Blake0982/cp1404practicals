@@ -2,14 +2,13 @@
 CP1404 Practical 9
 Taxi simulator
 """
-from car import Car
 from taxi import Taxi
 from silver_service_taxi import SilverServiceTaxi
 
 
 def main():
     """
-
+    taxi sim uses the three classes car taxi and silverservice taxi to simulation a situation
     """
     bill = 0
     taxis = [Taxi("Prius", 100), SilverServiceTaxi("Limo", 100, 2), SilverServiceTaxi("Hummer", 200, 4)]
@@ -21,11 +20,13 @@ def main():
         if menu_choice == "c":
             print("Taxis available: ")
             display_taxis(taxis)
-            # no error-checking
-            taxi_choice = int(input("Choose taxi: "))
             try:
-                current_taxi = taxis[taxi_choice]
-            except IndexError:
+                taxi_choice = int(input("Choose taxi: "))
+                try:
+                    current_taxi = taxis[taxi_choice]
+                except IndexError:
+                    print("Invalid taxi choice")
+            except ValueError:
                 print("Invalid taxi choice")
         elif menu_choice == "d":
             if current_taxi:
