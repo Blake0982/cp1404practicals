@@ -1,0 +1,14 @@
+from silver_service_taxi import SilverServiceTaxi
+
+
+def main():
+    my_taxi = SilverServiceTaxi("Prius 1", 100, 3)
+    print(my_taxi)
+    my_taxi.drive(40)
+    print(my_taxi)
+    my_taxi.start_fare()
+    my_taxi.drive(40.2)
+    print(f"{my_taxi}, Current fare: ${my_taxi.get_fare():.2f}")
+
+
+main()
